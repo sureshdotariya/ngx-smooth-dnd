@@ -82,8 +82,7 @@ export class ContainerComponent implements AfterViewInit, OnDestroy {
     if (this.dragBeginDelay) options.dragBeginDelay = this.dragBeginDelay;
     if (this.animationDuration)
       options.animationDuration = this.animationDuration;
-    if (this.autoScrollEnabled)
-      options.autoScrollEnabled = this.autoScrollEnabled;
+    options.autoScrollEnabled = !this.autoScrollEnabled: false : true;
     if (this.dragClass) options.dragClass = this.dragClass;
     if (this.dropClass) options.dropClass = this.dropClass;
     if (this.dropPlaceholder) options.dropPlaceholder = this.dropPlaceholder;
